@@ -9,8 +9,11 @@ function calculateArea() {
     if (sides[0].value && sides[1].value && Number(sides[0].value>0) && Number(sides[1].value>0)) {
         showMessage("The area of the triangle is " + area + " units.");
     }
+    else if (Number(sides[0].value<0) || Number(sides[1].value<0)) {
+        showMessage("Length cannot be negative. Please enter valid lengths to continue")
+    }
     else {
-        showMessage("Please enter the correct values. Lenght values cannot be negative or empty.");
+        showMessage("Lenght values cannot be empty or zero. Please enter the correct values to continue.");
     };
     
 }

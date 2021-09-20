@@ -15,12 +15,12 @@ function isTriangle() {
 
 function sumOfAngles(angle1, angle2, angle3) {
     hideMessage();
-    if (inputs[0].value && inputs[1].value && inputs[2].value) {
+    if (Number(inputs[0].value>0) && Number(inputs[1].value>0) && Number(inputs[2].value>0)) {
         const angleSum = angle1 + angle2 + angle3;
         return angleSum;
     }
-    else {
-        showMessage("Please enter all the angles to continue")
+    else if (Number(inputs[0].value<=0) || Number(inputs[1].value<=0) || Number(inputs[2].value<=0)) {
+        showMessage("Angles cannot be zero,empty or negative. Please enter valid angle values in all fields to continue")
     }
     
 }
